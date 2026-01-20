@@ -1,0 +1,263 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+/* Navbar */
+#topBar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:transparent;
+  transition:0.3s;
+  z-index:1000;
+}
+
+#topBar ul{
+  list-style:none;
+  display:flex;
+}
+
+#topBar ul li{
+  margin-left:20px;
+}
+
+#topBar ul li a{
+  text-decoration:none;
+  color:white;
+  padding:6px 12px;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+#topBar ul li a:hover{
+  background:#a8dadc;
+  color:#1d3557;
+}
+
+#topBar ul li a.currentLink{
+  background:#ffe066;
+  color:#1d3557;
+  font-weight:bold;
+}
+
+.siteLogo{
+  color:white;
+}
+
+#topBar.scrolled{
+  background:#2f5d62;
+}
+
+/* Hero Section */
+.mainIntro{
+  height:100vh;
+  background:linear-gradient(to right,#56ccf2,#2f80ed);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+  padding:0 20px;
+}
+
+.introContent{
+  max-width:720px;
+}
+
+.introContent h1{
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.introContent p{
+  margin-top:10px;
+  font-size:18px;
+  line-height:1.5;
+}
+
+/* Hero button */
+#joinButton{
+  margin-top:25px;
+  padding:12px 30px;
+  border:none;
+  background:#2f5d62;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+#joinButton.clicked{
+  background:#a8dadc;
+  color:#1d3557;
+}
+
+/* About Section */
+.sectionAbout{
+  background:#e8f6f3;
+  color:#1d3557;
+  padding:100px 20px;
+}
+
+.aboutGroup{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+}
+
+.bubbleCard{
+  background:#cdeae4;
+  padding:30px 25px;
+  width:220px;
+  border-radius:50%;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bubbleCard p:first-child{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.bubbleCard h4{
+  margin-bottom:8px;
+  font-size:18px;
+}
+
+.bubbleCard p{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.bubbleCard:hover{
+  background:#a8dadc;
+}
+
+/* Courses Section */
+.sectionCourses{
+  background:#eef5ff;
+  padding:100px 20px;
+}
+
+.courseCards{
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+  gap:25px;
+}
+
+.courseCard{
+  background:#2f5d62;
+  color:white;
+  padding:25px 20px;
+  width:240px;
+  border-radius:12px;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.courseCard h4{
+  text-align:center;
+  margin-bottom:12px;
+  color:#a8dadc;
+  font-size:20px;
+}
+
+.courseCard p{
+  font-size:14px;
+  line-height:1.6;
+}
+
+.courseCard:hover{
+  background:#a8dadc;
+  color:#1d3557;
+}
+
+/* Contact Section */
+.sectionContact{
+  background:#f1faee;
+  color:#1d3557;
+  padding:80px 20px;
+}
+
+.contactGroup{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:30px;
+  gap:20px;
+}
+
+.contactRow{
+  background:#d4f1f4;
+  padding:22px 28px;
+  border-radius:18px;
+  width:260px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contactRow span{
+  font-size:26px;
+}
+
+.contactRow p{
+  margin:0;
+  font-size:15px;
+  line-height:1.4;
+}
+
+.contactRow:hover{
+  background:#a8dadc;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  #topBar{
+    flex-direction:column;
+  }
+
+  #topBar ul{
+    flex-direction:column;
+  }
+
+  #topBar ul li{
+    margin:10px 0;
+  }
+
+  .courseCards, .aboutGroup, .contactGroup{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .courseCard, .bubbleCard, .contactRow{
+    width:90%;
+    border-radius:15px;
+  }
+
+  .introContent h1{
+    font-size:28px;
+  }
+
+  .introContent p{
+    font-size:16px;
+  }
+}
